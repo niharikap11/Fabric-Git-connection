@@ -1,0 +1,4 @@
+relationship e138d568-e184-7001-4f2d-47a647911225
+	fromColumn: old_sales.SalesOrderNumber
+	toColumn: new_sales.SalesOrderNumber
+

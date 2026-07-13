@@ -1,0 +1,120 @@
+table new_sales
+	lineageTag: 13578e22-dded-46a2-a210-e80660c19550
+	sourceLineageTag: [dbo].[new_sales]
+
+	column SalesOrderNumber
+		dataType: string
+		lineageTag: c0aa00ed-7b48-482e-b1f1-f3d96069d5e1
+		sourceLineageTag: SalesOrderNumber
+		summarizeBy: none
+		sourceColumn: SalesOrderNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column SalesOrderLineNumber
+		dataType: string
+		lineageTag: 75bf874f-552f-448b-8cd6-fdc62b57e4ee
+		sourceLineageTag: SalesOrderLineNumber
+		summarizeBy: none
+		sourceColumn: SalesOrderLineNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column OrderDate
+		dataType: string
+		lineageTag: b7c2f2e3-56f8-4b5d-b37b-593b50819adf
+		sourceLineageTag: OrderDate
+		summarizeBy: none
+		sourceColumn: OrderDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column Year
+		dataType: int64
+		formatString: 0
+		lineageTag: 8f2996f2-fa83-4bdf-8a24-53d7f5845608
+		sourceLineageTag: Year
+		summarizeBy: none
+		sourceColumn: Year
+
+		annotation SummarizationSetBy = Automatic
+
+	column Month
+		dataType: int64
+		formatString: 0
+		lineageTag: 460a6431-5a66-4f87-9002-90819295860c
+		sourceLineageTag: Month
+		summarizeBy: none
+		sourceColumn: Month
+
+		annotation SummarizationSetBy = Automatic
+
+	column FirstName
+		dataType: string
+		lineageTag: 4e8a22f7-1b4d-4294-8d97-01d7986628bc
+		sourceLineageTag: FirstName
+		summarizeBy: none
+		sourceColumn: FirstName
+
+		annotation SummarizationSetBy = Automatic
+
+	column LastName
+		dataType: string
+		lineageTag: 4e5bafdc-4e0e-49d7-8212-9287251d763b
+		sourceLineageTag: LastName
+		summarizeBy: none
+		sourceColumn: LastName
+
+		annotation SummarizationSetBy = Automatic
+
+	column EmailAddress
+		dataType: string
+		lineageTag: af0b9516-18bd-43eb-9b0d-ae3acad842d6
+		sourceLineageTag: EmailAddress
+		summarizeBy: none
+		sourceColumn: EmailAddress
+
+		annotation SummarizationSetBy = Automatic
+
+	column Item
+		dataType: string
+		lineageTag: 1845bbd5-3d8d-4957-9c52-c1822e7f4121
+		sourceLineageTag: Item
+		summarizeBy: none
+		sourceColumn: Item
+
+		annotation SummarizationSetBy = Automatic
+
+	column Quantity
+		dataType: string
+		lineageTag: ef8bf74a-17d5-40c4-8fb4-ed1f4c5c112d
+		sourceLineageTag: Quantity
+		summarizeBy: none
+		sourceColumn: Quantity
+
+		annotation SummarizationSetBy = Automatic
+
+	column UnitPrice
+		dataType: string
+		lineageTag: 0f79f333-e408-4750-b820-d2e67ae5d889
+		sourceLineageTag: UnitPrice
+		summarizeBy: none
+		sourceColumn: UnitPrice
+
+		annotation SummarizationSetBy = Automatic
+
+	column TaxAmount
+		dataType: string
+		lineageTag: 95bb8c9e-9edb-474f-9377-294c949185f0
+		sourceLineageTag: TaxAmount
+		summarizeBy: none
+		sourceColumn: TaxAmount
+
+		annotation SummarizationSetBy = Automatic
+
+	partition new_sales = entity
+		mode: directLake
+		source
+			entityName: new_sales
+			expressionSource: 'DirectLake - Lab3_LH'
+

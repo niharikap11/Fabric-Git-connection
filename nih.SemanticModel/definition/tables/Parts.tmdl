@@ -1,0 +1,34 @@
+table Parts
+	lineageTag: e95deb30-09ed-4b69-a9bb-2f7893394525
+	sourceLineageTag: [dbo].[Parts]
+
+	column PartID
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 56ad8f88-205b-4355-9b9b-accbf5ced72f
+		sourceLineageTag: PartID
+		summarizeBy: count
+		sourceColumn: PartID
+
+		annotation SummarizationSetBy = Automatic
+
+	column PartName
+		dataType: string
+		sourceProviderType: varchar(25)
+		lineageTag: e180f603-505e-485d-8117-6e730f22229b
+		sourceLineageTag: PartName
+		summarizeBy: none
+		sourceColumn: PartName
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Parts = entity
+		mode: directLake
+		source
+			entityName: Parts
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

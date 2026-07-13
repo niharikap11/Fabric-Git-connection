@@ -1,0 +1,12 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Environment",
+    "displayName": "nihaa",
+    "description": "Environment"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "03c48104-361b-88ca-4b44-95bab7d28b70"
+  }
+}
