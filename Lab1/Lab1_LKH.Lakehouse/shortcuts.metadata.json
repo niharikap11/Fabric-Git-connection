@@ -1,0 +1,15 @@
+[
+  {
+    "name": "orders",
+    "path": "/Tables",
+    "target": {
+      "type": "OneLake",
+      "oneLake": {
+        "path": "Tables/orders",
+        "itemId": "e645ea1a-0de4-a633-470f-551093aa5be8",
+        "workspaceId": "00000000-0000-0000-0000-000000000000",
+        "artifactType": "Lakehouse"
+      }
+    }
+  }
+]

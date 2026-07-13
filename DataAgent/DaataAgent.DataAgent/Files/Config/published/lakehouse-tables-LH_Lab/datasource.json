@@ -1,0 +1,129 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/dataAgent/definition/dataSource/1.0.0/schema.json",
+  "artifactId": "8d229dd6-fdfc-4291-b32e-512ff995f626",
+  "workspaceId": "38edd7d4-16c6-43da-b7e9-b86cb7a1197d",
+  "dataSourceInstructions": null,
+  "displayName": "LH_Lab",
+  "type": "lakehouse_tables",
+  "userDescription": null,
+  "metadata": {},
+  "elements": [
+    {
+      "id": "39cce3e9-0d7c-47c5-857c-eb04fe5f04e3",
+      "is_selected": false,
+      "display_name": "Schemas",
+      "type": "schema_grouping",
+      "description": null,
+      "children": [
+        {
+          "id": "873857f8-89b1-42b1-85af-5501177f3433",
+          "is_selected": false,
+          "display_name": "dbo",
+          "type": "lakehouse_tables.schema",
+          "description": null,
+          "children": [
+            {
+              "id": "f4968eb1-592c-44f5-a5cb-65c99a4c21f4",
+              "is_selected": false,
+              "display_name": "Tables",
+              "type": "table_grouping",
+              "description": null,
+              "children": [
+                {
+                  "id": "62b76c38-1337-4e16-a069-23d7dbfd4c82",
+                  "is_selected": true,
+                  "display_name": "staging sales",
+                  "type": "lakehouse_tables.table",
+                  "description": null,
+                  "children": [
+                    {
+                      "id": "daf41855-3b0c-45c7-8fe2-3750b8531824",
+                      "is_selected": true,
+                      "display_name": "CustomerName",
+                      "type": "lakehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "305bbecd-87ba-4520-85c5-3081bf30ec0d",
+                      "is_selected": true,
+                      "display_name": "EmailAddress",
+                      "type": "lakehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "e418793d-ec54-4703-816c-034453a6859f",
+                      "is_selected": true,
+                      "display_name": "Item",
+                      "type": "lakehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "e15c44f9-590f-4ebf-8dfd-23644592677e",
+                      "is_selected": true,
+                      "display_name": "OrderDate",
+                      "type": "lakehouse_tables.column",
+                      "data_type": "date",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "7542f5c7-d493-4c8b-aa23-7b3dfae3adf9",
+                      "is_selected": true,
+                      "display_name": "Quantity",
+                      "type": "lakehouse_tables.column",
+                      "data_type": "int",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "9c5c8404-f3f7-4b9f-b8c0-0c59cc9961ac",
+                      "is_selected": true,
+                      "display_name": "SalesOrderLineNumber",
+                      "type": "lakehouse_tables.column",
+                      "data_type": "int",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "30266599-cc2c-4475-a993-e76a6334395f",
+                      "is_selected": true,
+                      "display_name": "SalesOrderNumber",
+                      "type": "lakehouse_tables.column",
+                      "data_type": "varchar",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "ae1d8484-d011-4f3a-8f67-6a3be15897b9",
+                      "is_selected": true,
+                      "display_name": "TaxAmount",
+                      "type": "lakehouse_tables.column",
+                      "data_type": "float",
+                      "description": null,
+                      "children": []
+                    },
+                    {
+                      "id": "818343c7-1512-4fca-9681-2dbc60c83496",
+                      "is_selected": true,
+                      "display_name": "UnitPrice",
+                      "type": "lakehouse_tables.column",
+                      "data_type": "float",
+                      "description": null,
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Dataflow",
+    "displayName": "on_prem_SQLserver"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "99b5d1f2-7a94-955f-4223-b7b60c893c1e"
+  }
+}

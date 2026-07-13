@@ -1,0 +1,55 @@
+table Sales2
+	lineageTag: a673564a-81f7-4618-a6b6-3594eede823d
+	sourceLineageTag: [dbo].[Sales2]
+
+	column OrderID
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 4eef96ab-64f9-4e4c-978f-32b0904018d5
+		sourceLineageTag: OrderID
+		summarizeBy: count
+		sourceColumn: OrderID
+
+		annotation SummarizationSetBy = Automatic
+
+	column SalesRep
+		dataType: string
+		sourceProviderType: varchar(60)
+		lineageTag: da5b2b20-f93d-4d85-b64b-5753d662a956
+		sourceLineageTag: SalesRep
+		summarizeBy: none
+		sourceColumn: SalesRep
+
+		annotation SummarizationSetBy = Automatic
+
+	column Product
+		dataType: string
+		sourceProviderType: varchar(10)
+		lineageTag: dcaddb02-574f-42e6-b9bd-2dcc6555c378
+		sourceLineageTag: Product
+		summarizeBy: none
+		sourceColumn: Product
+
+		annotation SummarizationSetBy = Automatic
+
+	column Quantity
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: c518ecbf-a663-4187-a6d3-84c977a66390
+		sourceLineageTag: Quantity
+		summarizeBy: sum
+		sourceColumn: Quantity
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Sales2 = entity
+		mode: directLake
+		source
+			entityName: Sales2
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

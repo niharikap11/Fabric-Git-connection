@@ -1,0 +1,91 @@
+table orders
+	lineageTag: 6a289b58-7043-4054-957d-5ff6ee3851f6
+	sourceLineageTag: [dbo].[orders]
+
+	column SalesOrderID
+		dataType: int64
+		formatString: 0
+		lineageTag: 634c6747-ba5d-4ed7-9701-5fef61315286
+		sourceLineageTag: SalesOrderID
+		summarizeBy: count
+		sourceColumn: SalesOrderID
+
+		annotation SummarizationSetBy = Automatic
+
+	column OrderDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: f855baf9-dba5-451b-9768-6bb7e850942e
+		sourceLineageTag: OrderDate
+		summarizeBy: none
+		sourceColumn: OrderDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column CustomerID
+		dataType: int64
+		formatString: 0
+		lineageTag: 8df36362-29d7-4ec9-80b3-c3954e118e5f
+		sourceLineageTag: CustomerID
+		summarizeBy: count
+		sourceColumn: CustomerID
+
+		annotation SummarizationSetBy = Automatic
+
+	column LineItem
+		dataType: int64
+		formatString: 0
+		lineageTag: bb192f44-33df-4a5b-a8eb-1e5b22341e8b
+		sourceLineageTag: LineItem
+		summarizeBy: sum
+		sourceColumn: LineItem
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductID
+		dataType: int64
+		formatString: 0
+		lineageTag: bbd5233d-9d75-4a9c-9d70-e1b9f09bd193
+		sourceLineageTag: ProductID
+		summarizeBy: count
+		sourceColumn: ProductID
+
+		annotation SummarizationSetBy = Automatic
+
+	column OrderQty
+		dataType: int64
+		formatString: 0
+		lineageTag: 3acc8545-3f86-4e49-8ada-d0e78d08d134
+		sourceLineageTag: OrderQty
+		summarizeBy: sum
+		sourceColumn: OrderQty
+
+		annotation SummarizationSetBy = Automatic
+
+	column LineItemTotal
+		dataType: double
+		lineageTag: 3ad6ee3d-5837-40e2-86b3-7df04b8e1bd4
+		sourceLineageTag: LineItemTotal
+		summarizeBy: sum
+		sourceColumn: LineItemTotal
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column MonthNo
+		dataType: int64
+		formatString: 0
+		lineageTag: 2f8f95b4-b1cd-4f25-848c-940e7c700d50
+		sourceLineageTag: MonthNo
+		summarizeBy: sum
+		sourceColumn: MonthNo
+
+		annotation SummarizationSetBy = Automatic
+
+	partition orders = entity
+		mode: directLake
+		source
+			entityName: orders
+			expressionSource: 'DirectLake - Lab2_LKH'
+

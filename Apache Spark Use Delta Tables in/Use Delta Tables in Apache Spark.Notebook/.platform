@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Notebook",
+    "displayName": "Use Delta Tables in Apache Spark"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "2599eb2b-5888-8f3a-4af9-4e703d803a74"
+  }
+}

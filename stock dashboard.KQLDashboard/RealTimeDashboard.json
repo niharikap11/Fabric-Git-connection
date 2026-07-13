@@ -1,0 +1,101 @@
+{
+  "schema_version": 74,
+  "tiles": [
+    {
+      "id": "c87156fe-62fc-4c84-b7cb-1de73c6e9c59",
+      "title": "New Tile",
+      "visualType": "column",
+      "pageId": "673cbc0f-d1f4-48a9-a97a-88c004408cf0",
+      "layout": {
+        "x": 0,
+        "y": 0,
+        "width": 9,
+        "height": 7
+      },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "d258ff73-385e-4ca7-bbde-869b60a4a6f1"
+      },
+      "visualOptions": {
+        "multipleYAxes": {
+          "base": {
+            "id": "-1",
+            "label": "",
+            "columns": [],
+            "yAxisMaximumValue": null,
+            "yAxisMinimumValue": null,
+            "yAxisScale": "linear",
+            "horizontalLines": []
+          },
+          "additional": [],
+          "showMultiplePanels": false
+        },
+        "seriesColors": {},
+        "hideLegend": false,
+        "legendLocation": "bottom",
+        "xColumnTitle": "",
+        "xColumn": null,
+        "yColumns": null,
+        "seriesColumns": null,
+        "xAxisScale": "linear",
+        "verticalLine": "",
+        "crossFilter": [],
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "forceAxisTicks": false,
+        "drillthrough": [],
+        "selectedDataOnLoad": {
+          "all": true,
+          "limit": 10
+        }
+      }
+    }
+  ],
+  "baseQueries": [],
+  "parameters": [
+    {
+      "kind": "duration",
+      "id": "7c556842-0fbf-433e-84b9-67cbd393aa95",
+      "displayName": "Time range",
+      "description": "",
+      "beginVariableName": "_startTime",
+      "endVariableName": "_endTime",
+      "defaultValue": {
+        "kind": "dynamic",
+        "count": 1,
+        "unit": "hours"
+      },
+      "showOnPages": {
+        "kind": "all"
+      }
+    }
+  ],
+  "dataSources": [
+    {
+      "id": "47e35d52-8470-47a9-9066-1243ed9c114a",
+      "kind": "kusto-trident",
+      "name": "Lab14_EventHOUSE",
+      "clusterUri": "",
+      "databaseArtifactId": "2a14d843-3a96-4190-ab93-eeaacffc999d",
+      "database": "cffc999d-eeaa-ab93-4190-3a962a14d843",
+      "workspace": "00000000-0000-0000-0000-000000000000"
+    }
+  ],
+  "pages": [
+    {
+      "name": "Page 1",
+      "id": "673cbc0f-d1f4-48a9-a97a-88c004408cf0"
+    }
+  ],
+  "queries": [
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "47e35d52-8470-47a9-9066-1243ed9c114a"
+      },
+      "text": "stock\n | where [\"time\"] > ago(5m)\n | summarize avgPrice = avg(todecimal(bidPrice)) by symbol\n | project symbol, avgPrice",
+      "id": "d258ff73-385e-4ca7-bbde-869b60a4a6f1",
+      "usedVariables": []
+    }
+  ]
+}
