@@ -31,3 +31,25 @@
 -- META   "language": "sql",
 -- META   "language_group": "sqldatawarehouse"
 -- META }
+
+-- CELL ********************
+
+-- MAGIC %% sql 
+-- MAGIC Select * from orders
+
+-- METADATA ********************
+
+-- META {
+-- META   "language": "sql",
+-- META   "language_group": "sqldatawarehouse"
+-- META }
+
+-- CELL ********************
+
+
+-- METADATA ********************
+
+-- META {
+-- META   "language": "sql",
+-- META   "language_group": "sqldatawarehouse"
+-- META }
